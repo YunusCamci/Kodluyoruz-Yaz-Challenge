@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kodluyoruz Yaz Challenge 🚀</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container" style="height: 100vh; display: flex; flex-direction:column; justify-content: center;">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="text-center"> <b style="color: #F78501;">Kodluyoruz</b> Yaz Challenge 🚀</h3>
+            </div>
+        </div>
+
+        <div class="row gx-1 gy-1">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <ul>
+                            <li>🗓️ Hafta: 15</li>
+                            <li>📈 Zorluk: Easy</li>
+                            <li>🕵️ Görev: <u>Kullanıcının doğum tarihini alarak kaç yaşında olduğunu bulan bir
+                                    algoritma.</u>
+                            </li>
+                            <li>👨🏻‍💻 Developer: <a href="https://www.linkedin.com/in/yunus-camci/">Yunus Çamcı</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-body">
+
+                        <form>
+                            <div class="row">
+                                <div class="col-5">
+                                    <h5 style="margin-bottom: 20px;">Kaç Yaşımdayım? 🤔</h5>
+                                    <div class="input-group date" id="datepicker">
+                                        <input type="text" placeholder="Tarih" class="form-control" id="date"
+                                            style="cursor: pointer;" />
+                                        <span class="input-group-append" style="cursor: pointer;">
+                                            <span class="input-group-text bg-light d-block"
+                                                style="border-top-left-radius: 0; border-bottom-left-radius: 0;">
+                                                <i class="fa-solid fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <button type="button" class="btn"
+                                        style="float: right; margin-top:10px; background-color: #F78501; color:#fff;"
+                                        onclick="hesapla()">Hesapla</button>
+                                </div>
+                                <div class="col-5 mt-5">
+                                    <h5>Evett! 🫣</h5>
+                                    <ul>
+                                        <li><b id="yasIcon"></b> <b id="yasSonuc"></b></li>
+                                        <li>Aslan Burcusun</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script>
+        $(function () {
+            $('#datepicker').datepicker();
+        });
+    </script>
+
+    <script>
+        function calculateAge(birthMonth, birthDay, birthYear) {
+            todayDate = new Date();
+            todayYear = todayDate.getFullYear();
+            todayMonth = todayDate.getMonth();
+            todayDay = todayDate.getDate();
+            age = todayYear - birthYear;
+
+            if (todayMonth < birthMonth - 1) {
+                age--;
+            }
+
+            if (birthMonth - 1 == todayMonth && todayDay < birthDay) {
+                age--;
+            }
+
+            if (birthDay > todayDay) {
+                age = "Daha Doğmamış Olmalısın";
+            }
+
+            return age;
+        }
+
+
+
+        function hesapla() {
+            //inputtan gelen veriyi yakaladık
+            var date = document.getElementById("date").value;
+
+
+            // date inputundan gelen veriyi parçaladık
+            var dateYear = date.split("/");
+
+            // calculateAge fonksiyonu ile parçakadıgımız veri ile yaş hesaplaması yaptık
+            // calculateAge(ay, gün, yıl)
+            yas = calculateAge(dateYear[0], dateYear[1], dateYear[2]);
+
+            // yasSonuc id degerinde ki elemente hesaplama sonucumuzu yazdırdık
+            document.getElementById("yasSonuc").innerHTML = yas;
+
+            document.getElementById("yasIcon").innerHTML = Icon;
+        }
+
+        function yasTablosu(yas) {
+            if(yas >= 0 && yas <= 17){
+                Icon = "erfr";
+            }
+        }
+    </script>
+</body>
+
+</html>
