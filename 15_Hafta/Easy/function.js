@@ -64,6 +64,7 @@ function hesapla() {
     if (Math.sign(yas) === -1) {
         document.getElementById("yasSonuc").innerHTML = "Doğmamış Olmalısın!";
     } else if (isNaN(yas)) {
+        //Boş deger geldigide hata bastırıyoruz
         document.getElementById("yasSonuc").innerHTML = "Hata!";
     } else {
         // yasSonuc id degerinde ki elemente hesaplama sonucumuzu yazdırdık
