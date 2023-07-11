@@ -77,11 +77,7 @@
                                         onclick="hesapla()">Hesapla</button>
                                 </div>
                                 <div class="col-5 mt-5">
-                                    <h5>Evett! 🫣</h5>
-                                    <ul>
-                                        <li><b id="yasIcon"></b> <b id="yasSonuc"></b></li>
-                                        <li>Aslan Burcusun</li>
-                                    </ul>
+                                    <b id="yasIcon"></b> <b id="yasSonuc"></b>
                                 </div>
                             </div>
 
@@ -104,61 +100,12 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="function.js"></script>
 
     <script>
         $(function () {
             $('#datepicker').datepicker();
         });
-    </script>
-
-    <script>
-        function calculateAge(birthMonth, birthDay, birthYear) {
-            todayDate = new Date();
-            todayYear = todayDate.getFullYear();
-            todayMonth = todayDate.getMonth();
-            todayDay = todayDate.getDate();
-            age = todayYear - birthYear;
-
-            if (todayMonth < birthMonth - 1) {
-                age--;
-            }
-
-            if (birthMonth - 1 == todayMonth && todayDay < birthDay) {
-                age--;
-            }
-
-            if (birthDay > todayDay) {
-                age = "Daha Doğmamış Olmalısın";
-            }
-
-            return age;
-        }
-
-
-
-        function hesapla() {
-            //inputtan gelen veriyi yakaladık
-            var date = document.getElementById("date").value;
-
-
-            // date inputundan gelen veriyi parçaladık
-            var dateYear = date.split("/");
-
-            // calculateAge fonksiyonu ile parçakadıgımız veri ile yaş hesaplaması yaptık
-            // calculateAge(ay, gün, yıl)
-            yas = calculateAge(dateYear[0], dateYear[1], dateYear[2]);
-
-            // yasSonuc id degerinde ki elemente hesaplama sonucumuzu yazdırdık
-            document.getElementById("yasSonuc").innerHTML = yas;
-
-            document.getElementById("yasIcon").innerHTML = Icon;
-        }
-
-        function yasTablosu(yas) {
-            if(yas >= 0 && yas <= 17){
-                Icon = "erfr";
-            }
-        }
     </script>
 </body>
 
