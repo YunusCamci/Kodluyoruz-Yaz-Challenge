@@ -57,9 +57,6 @@ function hesapla() {
     // yasTablosu fonksiyonuna yas verisini ilettik 
     Icongoster = yasTablosu(yas);
 
-
-
-
     //Gelen yaş degerinin geçerli olup olmamasını kontrol ediyoruz
     if (Math.sign(yas) === -1) {
         document.getElementById("yasSonuc").innerHTML = "Doğmamış Olmalısın!";
