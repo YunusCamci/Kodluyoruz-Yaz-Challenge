@@ -61,7 +61,7 @@ function yasTablosu(Gelenyas) {
 }
 ```
 
-## Yaş Hesaplama ve Yaş Tablosundan Gelen verilerin Bir Araya Getirilip Ekrana Basımı
+## Yaş Hesaplama ve Yaş Tablosundan Gelen verilerin Bir Araya Getirilip Ekrana Yazdırılması
 
 ```javascript
 function hesapla() {
