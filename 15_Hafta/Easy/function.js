@@ -1,27 +1,33 @@
 function calculateAge(birthMonth, birthDay, birthYear) {
+    // Bugünün tarihini alıyoruz
     todayDate = new Date();
     todayYear = todayDate.getFullYear();
     todayMonth = todayDate.getMonth();
     todayDay = todayDate.getDate();
+
+    // Yaşı hesaplamak için doğum yılını kullanıyoruz
     age = todayYear - birthYear;
 
+    // Eğer bu ay doğum ayından önceyse, henüz doğum günü gelmemiş demektir, bu yüzden yaş bir azaltılır.
     if (todayMonth < birthMonth - 1) {
         age--;
     }
 
+    // Eğer doğum ayı bu ay ise ve bugün doğum günü henüz gelmemişse, yaş bir azaltılır.
     if (birthMonth - 1 == todayMonth && todayDay < birthDay) {
         age--;
     }
 
-
+    // Hesaplanan yaş değeri döndürülür
     return age;
 }
+
 
 function yasTablosu(Gelenyas) {
 
     var Icon;
 
-    //Yaş a göre ekrana bastırılacak icon u (emoji) belirliyoruz
+    //Yaş'a göre ekrana bastırılacak icon u (emoji) belirliyoruz
     if (Gelenyas >= 0 && Gelenyas <= 17) {
         Icon = "🌱";
     } else if (Gelenyas >= 18 && Gelenyas <= 65) {
