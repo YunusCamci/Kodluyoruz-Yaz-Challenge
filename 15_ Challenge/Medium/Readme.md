@@ -6,7 +6,7 @@ Bu projemizde Kodluyoruz Yaz Challenge'da 15. challenge'ın medium görevini tam
 
 ## Güncelleme
 
-Medium testimde fark ettim ki geceleri çok göz alıcı 😎 bir tasarım yapmış olmalıyım ki gözlerim kamaştı ve arayüzü koyu moda taşımış bulundum.
+Medium testimde fark ettim ki geceleri çok göz alıcı 😎 bir tasarım yapmış olmalıyım ki gözlerim kamaştı ve arayüzü koyu moda taşınmasını gerçekleştirdim.
 
 
 
