@@ -19,7 +19,8 @@
             background-color: #1a1d20;
             color: #fff;
         }
-        .card{
+
+        .card {
             background-color: #262a2f;
             color: #fff;
             border-color: #343a40;
@@ -32,6 +33,9 @@
         ul {
             list-style-type: none;
             margin: 0;
+        }
+        #sonuc b{
+            color: #fff;
         }
     </style>
 
@@ -59,8 +63,7 @@
                         <ul>
                             <li>🗓️ Hafta: 15</li>
                             <li>📈 Zorluk: Medium</li>
-                            <li>🕵️ Görev: <u>Kullanıcıdan bir metin almanızı istiyorum. Bu metnin içindeki en çok
-                                    tekrar eden harfi bulmalı ve kaç kere tekrar ettiğinin gösterimi yapılacak.</u>
+                            <li>🕵️ Görev: <u>Kullanıcıdan alınan metinde en çok tekrar eden harfi bulmak ve kaç defa tekrar ettigini yazdırmak.</u>
                             </li>
                             <li>👨🏻‍💻 Developer: <a href="https://www.linkedin.com/in/yunus-camci/">Yunus Çamcı</a>
                             </li>
@@ -75,7 +78,18 @@
                 <!-- Sağ İçerik Sütunu (Form) Başlangıç  -->
                 <div class="card">
                     <div class="card-body">
-                        dsfsdfsf
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Metin</label>
+                                <textarea class="form-control" id="metinInput" style="background-color: #1a1d20; color: #fff; border-color: #343a40; resize: none; height: 300px;" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+
+                            <button type="button" class="btn"
+                                style="float: right; margin-top:10px; background-color: #F78501; color:#fff;"
+                                onclick="harfBul()">Bul</button>
+                        </form>
+
+                        <div class="mt-4" style="color: #dbdbdb; font-size: 20px;" id="sonuc"></div>
                     </div>
                 </div>
                 <!-- Sağ İçerik Sütunu (Form) Bitiş  -->
@@ -95,6 +109,52 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script>
+        function harfBul() {
+            var metin = document.getElementById("metinInput").value;
+            var charCount = {};
+
+
+            for (var i = 0; i < metin.length; i++) {
+                var letter = metin[i].toLowerCase();
+
+                // Harfleri kontrol yapıyoruz
+                if (/[a-z]/.test(letter)) {
+                    // Harf zaten charCount nesnesinde mevcutsa, sayısını artırıyoruz
+                    if (charCount[letter]) {
+                        charCount[letter]++;
+                    } else {
+                        // Harf charCount nesnesinde yoksa, 1 olarak başlatıyoruz
+                        charCount[letter] = 1;
+                    }
+                }
+            }
+
+            var mostRepeatedLetter = "";
+            var highestCount = 0;
+
+            // charCount nesnesini döngüye alarak en çok tekrar eden harfi buluyoruz
+            for (var letter in charCount) {
+                if (charCount[letter] > highestCount) {
+                    mostRepeatedLetter = letter;
+                    highestCount = charCount[letter];
+                }
+            }
+
+            console.log(
+                "En çok tekrar olan harf: " +
+                mostRepeatedLetter +
+                ", Toplam tekrar sayısı: " +
+                highestCount
+            );
+
+            document.getElementById("sonuc").innerHTML = "Metinde <b><u>"+ mostRepeatedLetter +"</u></b> harfi <b><u>" + highestCount + "</u></b> kez tekrar ediyor.";
+        }
+
+
+    </script>
+
     <!--
         Yunus Çamcı
         12 Temmuz 2023
