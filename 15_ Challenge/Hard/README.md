@@ -1,6 +1,6 @@
 
 # Tam Sayı Listesi ile Hedef Sayıya Ulaşma
-Bu projemizde Kodluyoruz Yaz Challenge'da 15. challenge'ın hard görevini tamamladık. Bu görev de kullanıcıdan alınan hedef sayı doğrultusunda tam sayı listesinden farklı kombinasyonları toplama işlemi yaparak hedef sayımıza ulaşmaya çalışıyoruz, bu görevi oyunlaştırma tarzında bir UI ile destekledik. Bu kdou yazarken desteklerinden dolayı yapay zekaya teşekkürlerimi borç bilirim. 🥹😅 
+Bu projemizde Kodluyoruz Yaz Challenge'da 15. challenge'ın hard görevini tamamladık. Bu görev de kullanıcıdan alınan hedef sayı doğrultusunda tam sayı listesinden farklı kombinasyonları toplama işlemi yaparak hedef sayımıza ulaşmaya çalışıyoruz, bu görevi oyunlaştırma tarzında bir UI ile destekledik. Bu kodu yazarken desteklerinden dolayı yapay zekaya teşekkürlerimi borç bilirim. 🥹😅 
 
 
 
