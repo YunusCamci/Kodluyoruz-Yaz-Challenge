@@ -1,4 +1,4 @@
-# Asal Sayı Dizi Oluşturma ve Kuallnıcıdan Gelen Sayının Kontrolü
+# Asal Sayı Dizi Oluşturma ve Kullanıcıdan Gelen Sayının Kontrolü
 Bu projemizde Kodluyoruz Yaz Challenge'da 13. challenge'ın easy görevini yerine getirdik.
 
 
