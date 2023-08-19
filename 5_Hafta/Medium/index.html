@@ -71,24 +71,21 @@
                         <form>
                             <div class="row">
                                 <div class="col-5">
-                                    <h5 style="margin-bottom: 20px;">Bu Sayı Toplamı Kaç 🤔</h5>
+                                    <h5 style="margin-bottom: 20px;">Bu Cümlede Kaç kelime Var? 🤔</h5>
 
-                                    <!--Kullanıcıdan alınan sayı değerleri-->
-                                    <div class="mb-3">
-                                        <input type="number" class="form-control" id="kullaniciSayi1">
+
+                                    <div class="form-group mb-3">
+                                        <textarea class="form-control" id="cumleTextArea" rows="3"></textarea>
                                     </div>
-                                    <div class="mb-3">
-                                        <input type="number" class="form-control" id="kullaniciSayi2">
-                                    </div>
-                                    
-                                    <div style="border-bottom:1px solid #000; ">+</div>
+
+
 
                                     <div
                                         style="display: flex; justify-content: space-between; align-items: center; margin-top:10px;">
                                         <button type="button" class="btn" style="background-color: #F78501; color:#fff;"
-                                            onclick="topla()">Topla</button>
+                                            onclick="bul()">Bul</button>
 
-                                        <b id="sonuc" style="float: right; font-size: 22px;"></b>
+                                        <b id="sonuc" style="float: right; font-size: 20px;"></b>
                                     </div>
 
 
@@ -124,15 +121,15 @@
 
 
     <script>
-        //Toplama fonksiyonu
-        function topla() {
+        //Kelime Sayısı fonksiyonu
+        function bul() {
 
-            var sayi1 = Number(document.getElementById("kullaniciSayi1").value);
-            var sayi2 = Number(document.getElementById("kullaniciSayi2").value);
+            var metin = document.getElementById("cumleTextArea").value;
 
-            var toplam = sayi1 + sayi2;
+            // Metni boşluk karakterine göre böler ve boşluk karakteri sayısı + 1 kadar kelime olduğunu hesaplar
+            var kelimeSayisi = metin.split(" ").length;
 
-            document.getElementById("sonuc").innerHTML = toplam;
+            document.getElementById("sonuc").innerHTML = "Toplam Kelime Sayısı: " + kelimeSayisi;
 
         }
 
