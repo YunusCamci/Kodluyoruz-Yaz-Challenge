@@ -1,6 +1,6 @@
 # Hız-Zaman-Mesafe Problemi
 Bu projemizde bir araç 60 Km hız ile 240Km yolu kaç saate alır hesaplamasını yaptık.
-Kullanmış olduğumuz ondalıklı sayı kontörlü olmadan to.Fixed kullanıldığı takdir de tam sayılar da virgüllü eklendigi (ör; 4.00) için UI da daha düzgün bir çıktı olması için kullanıldı.
+Kullanmış olduğumuz ondalıklı sayı kontörlü olmadan to.Fixed kullanıldığı takdir de tam sayılar da virgül eklendigi (ör; 4.00) için UI da daha düzgün bir çıktı olması için kullanıldı.
 
 
 ## Kullanılan Teknolojiler
