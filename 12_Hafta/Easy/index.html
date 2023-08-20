@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kodluyoruz Yaz Challenge 🚀</title>
+    <!-- CSS Kütüphaneleri -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Container Başlangıçı -->
+    <div class="container" style="height: 100vh; display: flex; flex-direction:column; justify-content: center;">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 style="text-align: center; margin-bottom:70px">Bu Yolu Kaç Saate Gider?</h5>
+
+
+                <div style="display: flex; justify-content: space-around; align-items: flex-end;">
+                    <div>0 Km</div>
+                    <div style="position: absolute; left: 40%;">
+                        <lord-icon src="https://cdn.lordicon.com/jntzsapy.json" trigger="loop"
+                            colors="primary:#f78501,secondary:#121331"
+                            style="width:75px;height:75px; margin-bottom: -22px;">
+                        </lord-icon>
+                    </div>
+                    <div style="border-bottom: 1px solid #000; width: 90%;"></div>
+                    <div id="bitisKm"></div>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">Bu araç <b id="hiz"></b> hızla gittiği bu yolu <b
+                        id="sonuc"> </b> tamamlar</div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Container Bitişi -->
+
+
+
+
+    <!-- Script Dosyaları -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
+    <script>
+        window.onload = function () {
+
+            //Mesafe ve hız verilerimizi tanımlıyoruz
+            let mesafe = 240;
+            let hiz = 60;
+
+            //Varış süresini hesaplamak için mesafeyi hıza bölüyoruz
+            varis = mesafe / hiz;
+
+            // Bu kontrol de sayı ondalıklı olup olmadıgını kontrol ediyoruz
+            function isDecimalNumber(num) {
+                return typeof num === 'number' && num % 1 !== 0;
+            }
+
+
+            //Hız ve mesafeyi UI da dinamik olarak gösterimini yapıyoruz
+            document.getElementById('hiz').innerText = hiz + ' Km/h';
+            document.getElementById('bitisKm').innerText = mesafe + ' Km';
+
+            //Eger sayı ondalıklı ise virgülden sonra iki hane gözükecek şekilde ayarlıyoruz (ör; 3.30)
+            if (isDecimalNumber(varis) == true) {
+                document.getElementById('sonuc').innerText = varis.toFixed(2) + ' saate';
+            } else {
+                //sayı ondalıklı degilse direk yazılmasını saglıyoruz
+                document.getElementById('sonuc').innerText = varis + ' saate';
+            }
+
+
+
+        };
+    </script>
+    <!--
+        Yunus Çamcı
+        20 Ağustos 2023
+        Kodluyoruz Yaz Challenge 12
+    -->
+</body>
+
+</html>
