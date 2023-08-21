@@ -1,4 +1,4 @@
-# Dizinin Kaç Tekrar Var Bulma
+# Dizide Kaç Tekrar Var Bulma
 Bu projemizde Kodluyoruz Yaz Challenge'da 11. challenge'ın hard görevini yerine getirdik.
 
 
