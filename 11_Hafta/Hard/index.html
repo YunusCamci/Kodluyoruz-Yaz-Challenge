@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kodluyoruz Yaz Challenge 🚀</title>
+    <!-- CSS Kütüphaneleri -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Container Başlangıçı -->
+    <div class="container" style="height: 100vh; display: flex; flex-direction:column; justify-content: center;">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 style="text-align: center; margin-bottom:40px">Dizinin Kaç Tekrar Var?</h5>
+
+                <div style="font-size: 20px; text-align: center;">Hedef sayı <b id="hedefSayi"></b>, dizide <b id="tekrarSayi"></b> kez tekrar ediyor.</div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Container Bitişi -->
+
+
+
+
+    <!-- Script Dosyaları -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+
+
+    <script>
+        //say fonksiyonu gelen dizi ve hedef sayıyı alıp for döngüsünden geçirip eşleşme durumunda count degerini artırıyor
+        function say(siraliDizi, hedef) {
+            let count = 0;
+            for (let i = 0; i < siraliDizi.length; i++) {
+                if (siraliDizi[i] === hedef) {
+                    count++;
+                } else if (siraliDizi[i] > hedef) {
+                    break; 
+                }
+            }
+            return count;
+        }
+
+        //dizi ve hedef sayı değişkenlerini tanımlıyoruz
+        const siraliDizi = [2, 4, 4, 4, 6, 7, 7, 7, 9];
+        const hedefSayi = 7;
+
+        //say fonksiyonundan dizi ve hedef sayıyı geçiyoruz
+        const tekrar = say(siraliDizi, hedefSayi);
+
+        //UI da gerekli yerlere yazdırma işlemini yapıyoruz
+        document.getElementById('hedefSayi').innerHTML = hedefSayi;
+        document.getElementById('tekrarSayi').innerHTML = tekrar;
+    </script>
+    <!--
+        Yunus Çamcı
+        21 Ağustos 2023
+        Kodluyoruz Yaz Challenge 11
+    -->
+</body>
+
+</html>
