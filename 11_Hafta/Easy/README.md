@@ -1,4 +1,4 @@
-# FaktöriyelBulma
+# Faktöriyel Bulma
 Bu projemizde Kodluyoruz Yaz Challenge'da 11. challenge'ın medium görevini yerine getirdik.
 
 
