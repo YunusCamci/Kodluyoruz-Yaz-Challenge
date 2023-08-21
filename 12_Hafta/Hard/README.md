@@ -8,7 +8,7 @@ Bu projemizde iki musluk bir havuzu kaç saate doldurur hesaplamasını yaptık.
 
 
   
-## Hız-Zaman-Mesafe Problemi Çözüm Algoritması
+## Havuz Problemi Çözüm Algoritması
 
 ```javascript
         window.onload = function () {
