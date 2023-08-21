@@ -27,7 +27,7 @@ Bu projemizde Kodluyoruz Yaz Challenge'da 11. challenge'ın hard görevini yerin
 
         //dizi ve hedef sayı değişkenlerini tanımlıyoruz
           const siraliDizi = [2, 4, 6, 7, 6, 5, 9, 1, 9];
-        const hedefSayi = 9;
+          const hedefSayi = 9;
 
         //say fonksiyonundan dizi ve hedef sayıyı geçiyoruz
         const tekrar = say(siraliDizi, hedefSayi);
