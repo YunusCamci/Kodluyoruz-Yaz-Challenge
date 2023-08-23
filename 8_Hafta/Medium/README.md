@@ -1,4 +1,4 @@
-# Dizide li Medyanı Bulma
+# Dizide ki Medyanı Bulma
 Bu projemizde Kodluyoruz Yaz Challenge'da 8. challenge'ın medium görevini yerine getirdik. (ChatGPT Katkıları ile.)
 
 
