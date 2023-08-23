@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodluyoruz Yaz Challenge 🚀</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        function hesaplaMedyan(veriler) {
+            // Verileri sırala
+            const siraliVeriler = veriler.slice().sort((a, b) => a - b);
+
+            const n = siraliVeriler.length;
+
+            if (n % 2 === 1) {
+                // Veri sayısı tek ise
+                const ortaIndeks = Math.floor(n / 2);
+                return siraliVeriler[ortaIndeks];
+            } else {
+                // Veri sayısı çift ise
+                const ustOrtaIndeks = n / 2;
+                const altOrtaIndeks = ustOrtaIndeks - 1;
+                return (siraliVeriler[altOrtaIndeks] + siraliVeriler[ustOrtaIndeks]) / 2;
+            }
+        }
+
+        const veriDizisi = [9, 3, 7, 11, 5]; // Örnek veri dizisi
+        const medyan = hesaplaMedyan(veriDizisi);
+        console.log("Medyan:", medyan);
+
+
+    </script>
+    <!--
+        Yunus Çamcı
+        23 Ağustos 2023
+        Kodluyoruz Yaz Challenge 8
+    -->
+</body>
+
+</html>
