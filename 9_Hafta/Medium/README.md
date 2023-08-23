@@ -1,5 +1,5 @@
 # Dizide ki Çift Sayıların Toplamını Bulma
-Bu projemizde Kodluyoruz Yaz Challenge'da 9. challenge'ın easy görevini yerine getirdik.
+Bu projemizde Kodluyoruz Yaz Challenge'da 9. challenge'ın medium görevini yerine getirdik.
 
 
 

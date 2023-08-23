@@ -1,5 +1,5 @@
 # Cümlede Kullanılan İkilemleri Bulma
-Bu projemizde Kodluyoruz Yaz Challenge'da 11. challenge'ın easy görevini yerine getirdik.
+Bu projemizde Kodluyoruz Yaz Challenge'da 11. challenge'ın hard görevini yerine getirdik.
 
     ör;
          Kullanıcı metin: at ağır ağır ilerliyordu.
