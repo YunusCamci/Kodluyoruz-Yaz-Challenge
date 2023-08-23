@@ -1,11 +1,11 @@
 # Cümlede Kullanılan İkilemleri Bulma
 Bu projemizde Kodluyoruz Yaz Challenge'da 11. challenge'ın easy görevini yerine getirdik.
 
-    ör;
-         Kullanıcı metin: at ağır ağır ilerliyordu.
-         Cevap: ikilime kullandınız.
-         Kullanıcı metin: Yürüyerek gidiyorduk.
-         Cevap: İkileme bulunamadı.
+ör;
+Kullanıcı metin: at ağır ağır ilerliyordu.
+Cevap: ikilime kullandınız.
+Kullanıcı metin: Yürüyerek gidiyorduk.
+Cevap: İkileme bulunamadı.
 
 
 ## Kullanılan Teknolojiler
