@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodluyoruz Yaz Challenge 🚀</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // Bir dizi oluşturuyoruz
+        const sayilar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // Çift sayıların toplamını tutacak değişkeni başlatıyoruz
+        let ciftToplam = 0;
+
+        // Dizi içinde dolaşarak çift sayıları bulup toplama ekliyoruz
+        for (let i = 0; i < sayilar.length; i++) {
+            if (sayilar[i] % 2 === 0) {
+                ciftToplam += sayilar[i];
+            }
+        }
+
+        // Sonuçları görüntülüyoruz
+        console.log("Çift sayıların toplamı:", ciftToplam);
+
+
+    </script>
+    <!--
+        Yunus Çamcı
+        23 Ağustos 2023
+        Kodluyoruz Yaz Challenge 9
+    -->
+</body>
+
+</html>
