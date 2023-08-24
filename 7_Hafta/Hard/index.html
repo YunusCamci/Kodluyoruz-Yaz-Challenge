@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kodluyoruz Yaz Challenge 🚀</title>
+    <!-- CSS Kütüphaneleri -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Container Başlangıçı -->
+    <div class="container" style="height: 100vh; display: flex; flex-direction:column; justify-content: center;">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 style="text-align: center; margin-bottom:40px">Bu Kelime Kaç Karakter?</h5>
+
+                <div style="display: flex; justify-content: center;">
+                    <form style="width: 300px;">
+
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Bir Metin Giriniz." id="kullaniciMetin"
+                                style="height: 150px"></textarea>
+                            <label for="kullaniciMetin">Bir Metin Giriniz.</label>
+                        </div>
+
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; padding-left:5px; padding-right:5px;">
+                            <div id="sonuc"></div>
+                            <button type="button" class="btn" style="background-color: #F78501; color:#fff;"
+                                onclick="bul()">Bul</button>
+
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Container Bitişi -->
+
+
+
+
+    <!-- Script Dosyaları -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+
+
+    <script>
+
+        function bul() {
+            // Kullanıcıdan metni al
+            var metin = document.getElementById('kullaniciMetin').value;
+
+            // Metindeki sesli harfleri belirle
+            var sesliHarfler = "aeıioöuüAEIİOÖUÜ";
+
+            // Sesli harf sayısını tutan değişken
+            var sesliHarfSayisi = 0;
+
+            // Metindeki her karakteri kontrol et
+            for (var i = 0; i < metin.length; i++) {
+                if (sesliHarfler.includes(metin[i])) {
+                    sesliHarfSayisi++;
+                }
+            }
+
+            // Sonucu ekrana yazdır
+            document.getElementById('sonuc').innerHTML = "Metindeki sesli harf sayısı: <b>" + sesliHarfSayisi + "</b>";
+        
+        }
+
+    </script>
+    <!--
+        Yunus Çamcı
+        23 Ağustos 2023
+        Kodluyoruz Yaz Challenge 7
+    -->
+</body>
+
+</html>
