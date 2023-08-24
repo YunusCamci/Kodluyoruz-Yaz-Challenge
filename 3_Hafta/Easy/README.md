@@ -1,4 +1,4 @@
-# Futbol Maçı Atılan Toplam Gol Sayısı Bulma
+# Futbol Maçı Atılan Toplam Gol Sayısını Bulma
 
 ## Kullanılan Teknolojiler
 
