@@ -1,4 +1,8 @@
 # Futbol Maçı Atılan Toplam Gol Sayısını Bulma
+Bir futbol maçında 3 puanlık atışlarda 5 kez isabet edildi, 2 puanlık atışlarda ise 10 kez isabet edildi Toplam kaç puan elde edildi?
+
+Problemi'nin çözümü.
+
 
 ## Kullanılan Teknolojiler
 

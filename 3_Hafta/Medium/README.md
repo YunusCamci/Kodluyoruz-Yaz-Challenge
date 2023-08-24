@@ -1,4 +1,8 @@
 # Ödenmesi Gereken Fiyatı Hesaplama
+Bir mağazada bir kitap 80 TL, bir defter 20 TL ve bir kalem 5 TL. Bir müşteri 2 kitap, 3 defter ve 4 kalem aldı. Müşteri ne kadar ödeme yapmalı?
+
+Problemi'nin çözümü.
+
 
 ## Kullanılan Teknolojiler
 
